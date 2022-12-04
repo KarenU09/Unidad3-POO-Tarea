@@ -44,11 +44,19 @@ Partial Class RegistroAlumno
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DatosAlumnos = New System.Windows.Forms.DataGridView()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpCodigo.SuspendLayout()
         Me.grpDatos.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatosAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -253,13 +261,14 @@ Partial Class RegistroAlumno
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Nombre"
         '
-        'DataGridView1
+        'DatosAlumnos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 288)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(747, 162)
-        Me.DataGridView1.TabIndex = 6
+        Me.DatosAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DatosAlumnos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.DatosAlumnos.Location = New System.Drawing.Point(22, 288)
+        Me.DatosAlumnos.Name = "DatosAlumnos"
+        Me.DatosAlumnos.Size = New System.Drawing.Size(747, 162)
+        Me.DatosAlumnos.TabIndex = 6
         '
         'Label11
         '
@@ -271,13 +280,53 @@ Partial Class RegistroAlumno
         Me.Label11.TabIndex = 7
         Me.Label11.Text = "Registro de Alumnos"
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Código"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Apellido"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Género"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Dirección"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "DUI"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Edad"
+        Me.Column7.Name = "Column7"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Correo"
+        Me.Column8.Name = "Column8"
+        '
         'RegistroAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(826, 462)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DatosAlumnos)
         Me.Controls.Add(Me.grpDatos)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.grpCodigo)
@@ -289,7 +338,7 @@ Partial Class RegistroAlumno
         Me.grpCodigo.PerformLayout()
         Me.grpDatos.ResumeLayout(False)
         Me.grpDatos.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatosAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -317,6 +366,14 @@ Partial Class RegistroAlumno
     Friend WithEvents TextEdad As TextBox
     Friend WithEvents TextCorreo As TextBox
     Friend WithEvents TextDUI As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DatosAlumnos As DataGridView
     Friend WithEvents Label11 As Label
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class
