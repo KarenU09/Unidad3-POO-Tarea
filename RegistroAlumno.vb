@@ -58,8 +58,6 @@
 
     End Sub
 
-    Private Sub DatosAlumnos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DatosAlumnos.CellContentClick
 
-    End Sub
 End Class
 

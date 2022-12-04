@@ -105,6 +105,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Persona.vb" />
+    <Compile Include="RegistroAuto.Designer.vb">
+      <DependentUpon>RegistroAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroAlumno.resx">
       <DependentUpon>RegistroAlumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroAuto.resx">
+      <DependentUpon>RegistroAuto.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
