@@ -80,17 +80,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Alumno.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="RegistroAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="RegistroAlumno.Designer.vb">
+      <DependentUpon>RegistroAlumno.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -113,6 +114,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroAlumno.resx">
+      <DependentUpon>RegistroAlumno.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
