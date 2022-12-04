@@ -25,27 +25,30 @@ Partial Class RegistroAlumno
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnGenerar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextCodigo = New System.Windows.Forms.TextBox()
         Me.grpCodigo = New System.Windows.Forms.GroupBox()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextNombre = New System.Windows.Forms.TextBox()
-        Me.BtnNombre = New System.Windows.Forms.Button()
         Me.grpDatos = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextApellido = New System.Windows.Forms.TextBox()
-        Me.TextGenero = New System.Windows.Forms.TextBox()
-        Me.TextDireccion = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextDUI = New System.Windows.Forms.TextBox()
-        Me.TextCorreo = New System.Windows.Forms.TextBox()
         Me.TextEdad = New System.Windows.Forms.TextBox()
+        Me.TextCorreo = New System.Windows.Forms.TextBox()
+        Me.TextDUI = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextDireccion = New System.Windows.Forms.TextBox()
+        Me.TextGenero = New System.Windows.Forms.TextBox()
+        Me.TextApellido = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.grpCodigo.SuspendLayout()
         Me.grpDatos.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -75,18 +78,18 @@ Partial Class RegistroAlumno
         Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 2
         '
-        'TextBox1
+        'TextCodigo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(29, 27)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(156, 26)
-        Me.TextBox1.TabIndex = 3
+        Me.TextCodigo.Location = New System.Drawing.Point(29, 27)
+        Me.TextCodigo.Name = "TextCodigo"
+        Me.TextCodigo.Size = New System.Drawing.Size(156, 26)
+        Me.TextCodigo.TabIndex = 3
         '
         'grpCodigo
         '
-        Me.grpCodigo.Controls.Add(Me.BtnNombre)
+        Me.grpCodigo.Controls.Add(Me.BtnAgregar)
         Me.grpCodigo.Controls.Add(Me.BtnGenerar)
-        Me.grpCodigo.Controls.Add(Me.TextBox1)
+        Me.grpCodigo.Controls.Add(Me.TextCodigo)
         Me.grpCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpCodigo.Location = New System.Drawing.Point(22, 24)
         Me.grpCodigo.Name = "grpCodigo"
@@ -94,6 +97,16 @@ Partial Class RegistroAlumno
         Me.grpCodigo.TabIndex = 4
         Me.grpCodigo.TabStop = False
         Me.grpCodigo.Text = "Generar Código"
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.Location = New System.Drawing.Point(512, 29)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(159, 23)
+        Me.BtnAgregar.TabIndex = 4
+        Me.BtnAgregar.Text = "Agregar Alumno"
+        Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -110,16 +123,6 @@ Partial Class RegistroAlumno
         Me.TextNombre.Name = "TextNombre"
         Me.TextNombre.Size = New System.Drawing.Size(207, 26)
         Me.TextNombre.TabIndex = 4
-        '
-        'BtnNombre
-        '
-        Me.BtnNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNombre.Location = New System.Drawing.Point(512, 29)
-        Me.BtnNombre.Name = "BtnNombre"
-        Me.BtnNombre.Size = New System.Drawing.Size(159, 23)
-        Me.BtnNombre.TabIndex = 4
-        Me.BtnNombre.Text = "Agregar Alumno"
-        Me.BtnNombre.UseVisualStyleBackColor = True
         '
         'grpDatos
         '
@@ -145,80 +148,26 @@ Partial Class RegistroAlumno
         Me.grpDatos.TabStop = False
         Me.grpDatos.Text = "Datos Alumnos"
         '
-        'Label4
+        'TextEdad
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(25, 34)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 20)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Nombre"
+        Me.TextEdad.Location = New System.Drawing.Point(484, 99)
+        Me.TextEdad.Name = "TextEdad"
+        Me.TextEdad.Size = New System.Drawing.Size(100, 26)
+        Me.TextEdad.TabIndex = 17
         '
-        'Label5
+        'TextCorreo
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(25, 64)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 20)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Apellido"
+        Me.TextCorreo.Location = New System.Drawing.Point(484, 67)
+        Me.TextCorreo.Name = "TextCorreo"
+        Me.TextCorreo.Size = New System.Drawing.Size(225, 26)
+        Me.TextCorreo.TabIndex = 16
         '
-        'Label6
+        'TextDUI
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(25, 99)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(69, 20)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "Genero"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(25, 133)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 20)
-        Me.Label7.TabIndex = 8
-        Me.Label7.Text = "Direccion"
-        '
-        'TextApellido
-        '
-        Me.TextApellido.Location = New System.Drawing.Point(138, 64)
-        Me.TextApellido.Name = "TextApellido"
-        Me.TextApellido.Size = New System.Drawing.Size(207, 26)
-        Me.TextApellido.TabIndex = 9
-        '
-        'TextGenero
-        '
-        Me.TextGenero.Location = New System.Drawing.Point(138, 96)
-        Me.TextGenero.Name = "TextGenero"
-        Me.TextGenero.Size = New System.Drawing.Size(100, 26)
-        Me.TextGenero.TabIndex = 10
-        '
-        'TextDireccion
-        '
-        Me.TextDireccion.Location = New System.Drawing.Point(138, 133)
-        Me.TextDireccion.Name = "TextDireccion"
-        Me.TextDireccion.Size = New System.Drawing.Size(207, 26)
-        Me.TextDireccion.TabIndex = 11
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(399, 37)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(41, 20)
-        Me.Label8.TabIndex = 12
-        Me.Label8.Text = "DUI"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(399, 70)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 20)
-        Me.Label9.TabIndex = 13
-        Me.Label9.Text = "Correo"
+        Me.TextDUI.Location = New System.Drawing.Point(484, 37)
+        Me.TextDUI.Name = "TextDUI"
+        Me.TextDUI.Size = New System.Drawing.Size(225, 26)
+        Me.TextDUI.TabIndex = 15
         '
         'Label10
         '
@@ -229,32 +178,106 @@ Partial Class RegistroAlumno
         Me.Label10.TabIndex = 14
         Me.Label10.Text = "Edad"
         '
-        'TextDUI
+        'Label9
         '
-        Me.TextDUI.Location = New System.Drawing.Point(484, 37)
-        Me.TextDUI.Name = "TextDUI"
-        Me.TextDUI.Size = New System.Drawing.Size(225, 26)
-        Me.TextDUI.TabIndex = 15
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(399, 70)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(63, 20)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Correo"
         '
-        'TextCorreo
+        'Label8
         '
-        Me.TextCorreo.Location = New System.Drawing.Point(484, 67)
-        Me.TextCorreo.Name = "TextCorreo"
-        Me.TextCorreo.Size = New System.Drawing.Size(225, 26)
-        Me.TextCorreo.TabIndex = 16
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(399, 37)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(41, 20)
+        Me.Label8.TabIndex = 12
+        Me.Label8.Text = "DUI"
         '
-        'TextEdad
+        'TextDireccion
         '
-        Me.TextEdad.Location = New System.Drawing.Point(484, 99)
-        Me.TextEdad.Name = "TextEdad"
-        Me.TextEdad.Size = New System.Drawing.Size(100, 26)
-        Me.TextEdad.TabIndex = 17
+        Me.TextDireccion.Location = New System.Drawing.Point(138, 133)
+        Me.TextDireccion.Name = "TextDireccion"
+        Me.TextDireccion.Size = New System.Drawing.Size(207, 26)
+        Me.TextDireccion.TabIndex = 11
+        '
+        'TextGenero
+        '
+        Me.TextGenero.Location = New System.Drawing.Point(138, 96)
+        Me.TextGenero.Name = "TextGenero"
+        Me.TextGenero.Size = New System.Drawing.Size(100, 26)
+        Me.TextGenero.TabIndex = 10
+        '
+        'TextApellido
+        '
+        Me.TextApellido.Location = New System.Drawing.Point(138, 64)
+        Me.TextApellido.Name = "TextApellido"
+        Me.TextApellido.Size = New System.Drawing.Size(207, 26)
+        Me.TextApellido.TabIndex = 9
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(25, 133)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(84, 20)
+        Me.Label7.TabIndex = 8
+        Me.Label7.Text = "Direccion"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(25, 99)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(69, 20)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "Genero"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(25, 64)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(73, 20)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Apellido"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(25, 34)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 20)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Nombre"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(22, 288)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(747, 162)
+        Me.DataGridView1.TabIndex = 6
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(311, -3)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(205, 24)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Registro de Alumnos"
         '
         'RegistroAlumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(826, 450)
+        Me.ClientSize = New System.Drawing.Size(826, 462)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.grpDatos)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.grpCodigo)
@@ -266,6 +289,7 @@ Partial Class RegistroAlumno
         Me.grpCodigo.PerformLayout()
         Me.grpDatos.ResumeLayout(False)
         Me.grpDatos.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -274,10 +298,10 @@ Partial Class RegistroAlumno
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnGenerar As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextCodigo As TextBox
     Friend WithEvents grpCodigo As GroupBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents BtnNombre As Button
+    Friend WithEvents BtnAgregar As Button
     Friend WithEvents TextNombre As TextBox
     Friend WithEvents grpDatos As GroupBox
     Friend WithEvents Label7 As Label
@@ -293,4 +317,6 @@ Partial Class RegistroAlumno
     Friend WithEvents TextEdad As TextBox
     Friend WithEvents TextCorreo As TextBox
     Friend WithEvents TextDUI As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label11 As Label
 End Class
